@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import DeckList from './components/DeckList';
+import CreateDeck from './components/CreateDeck';
+import DeckWords from './components/DeckWords';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ padding: '1rem' }}>
+        <h1>WithWord MVP</h1>
+        <nav>
+          <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+            <li>
+              <Link to="/decks">Deck List</Link>
+            </li>
+            <li>
+              <Link to="/create-deck">Create Deck</Link>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <Routes>
+          <Route path="/decks" element={<DeckList />} />
+          <Route path="/create-deck" element={<CreateDeck />} />
+          <Route path="/decks/:deckId/words" element={<DeckWords />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
