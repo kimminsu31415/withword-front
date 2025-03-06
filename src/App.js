@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import DeckList from './components/DeckList';
 import CreateDeck from './components/CreateDeck';
 import DeckWords from './components/DeckWords';
+import Design from './components/Design';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
             <li>
               <Link to="/create-deck">Create Deck</Link>
             </li>
+            <li>
+              <Link to="/design">Test Design</Link>
+            </li>
           </ul>
         </nav>
         <hr />
@@ -25,6 +29,7 @@ function App() {
           <Route path="/decks" element={<DeckList />} />
           <Route path="/create-deck" element={<CreateDeck />} />
           <Route path="/decks/:deckId/words" element={<DeckWords />} />
+          <Route path="/design" element={<Design />} />
         </Routes>
       </div>
     </Router>
