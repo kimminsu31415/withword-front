@@ -1,0 +1,42 @@
+.note-deck {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+
+.note-deck h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.note-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.note-input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.vertical-divider {
+  width: 2px;
+  background-color: #000;
+  margin: 0 0.5rem;
+  height: 2rem;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
