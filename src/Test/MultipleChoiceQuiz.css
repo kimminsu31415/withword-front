@@ -1,0 +1,69 @@
+/* src/Test/MultipleChoiceQuiz.css */
+.quiz-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 2px solid #3f51b5;
+  border-radius: 8px;
+  background-color: #e8eaf6;
+  text-align: center;
+}
+
+.question p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.choice-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #3f51b5;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.choice-button.selected {
+  background-color: #c5cae9;
+}
+
+.choice-button:disabled {
+  cursor: not-allowed;
+}
+
+.submit-button,
+.next-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3f51b5;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:disabled {
+  background-color: #9fa8da;
+  cursor: not-allowed;
+}
+
+.score {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.result p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
